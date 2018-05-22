@@ -1,0 +1,108 @@
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin table{
+  display: table;
+  width: 100%;
+}
+
+@mixin tabCellMax{
+  display: table-cell;
+  width: 100%;
+  padding: 0 5px;
+}
+
+@mixin tabCellMin{
+  display: table-cell;
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+
+  .details-top{
+    height: .88rem;
+    line-height: .88rem;
+    border-bottom: 1px solid #e0dedc;
+    position: fixed;
+    width: 7.5rem;
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    @include table;
+    .topBack{
+      display: block;
+      min-width: .8rem;
+      height: .8rem;
+      background: url(../assets/icon-06.png) no-repeat 50% 50%/auto .36rem;
+      @include tabCellMin;
+    }
+    .topCenter{
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 5rem;
+      @include tabCellMax;
+    }
+    .topRight{
+      @include tabCellMin;
+      span{
+        @include tabCellMin;
+        min-width: .8rem;
+        height: .8rem;
+      }
+      .btn-reply{
+        background: url(../assets/icon-08.png) no-repeat 50% 50%/auto .4rem;
+      }
+      .btn-share {
+        background: url(../assets/icon-07.png) no-repeat 50% 50%/auto .1rem;
+      }
+    }
+  }
+
+  .details-content{
+    margin-top: 0.88rem;
+  }
+
+  @mixin marginTop{
+    margin: 0 0.3rem;
+    padding-top: 0.3rem;
+  }
+  .content-top{
+    @include marginTop;
+    h2{
+      font-size: 0.44rem;
+      line-height: 0.56rem;
+      font-weight: 700;
+      color: #3a3a3a;
+      margin-bottom:0.2rem;
+    }
+    .content-top-user{
+      margin:0.1rem 0;
+      img{
+        float: left;
+        overflow: hidden;
+        border-radius: 50%;
+        width: .5rem;
+        height: .5rem;
+        margin-top: .08rem;
+      }
+      .top-user-describe{
+        float: left;
+        margin-left: 0.12rem;
+        h3,span{
+          font-size: 0.24rem;
+          color: #999;
+          padding: 0.1rem;
+        }
+      }
+    }
+  }
+  .content-text{
+    @include marginTop;
+  }

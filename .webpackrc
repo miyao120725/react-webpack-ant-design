@@ -1,0 +1,20 @@
+{
+  "extraBabelPlugins": [
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+  ],
+  "disableCSSModules":true,
+  "proxy": {
+    "/api": {
+      "target": "http://pclistinterface.mop.com/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "/" }
+    }
+  },
+  "proxy": {
+    "/dev": {
+      "target": "http://106.75.98.65/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/dev" : "/" }
+    }
+  }
+}
